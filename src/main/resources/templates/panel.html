@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+   <head th:replace=" /fragments/head :: head">    </head>
+
+    <body>
+ <nav th:replace=" /fragments/navbar :: nav">    </nav>
+        <div>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/libro/registrar}">Libros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/autor/registrar}">Autores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/editorial/registrar}">Editoriales</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="card" style="width: 20rem; margin: 2%;">
+                <img src="/libro.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Cargas de Libro</h5>
+                    <p class="card-text">Ingrese aqui para agregar un libro a la base de datos</p>
+                    <a th:href="@{/libro/registrar}" class="btn btn-primary">CARGAR</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 20rem; margin: 2%;">
+                <img src="/autor.png" object-fit="cover" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Cargas de Autores</h5>
+                    <p class="card-text">Ingrese aqui para agregar un Autor a la base de datos</p>
+                    <a th:href="@{/autor/registrar}" class="btn btn-primary">CARGAR</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 20rem; margin: 2%;">
+                <img src="/libro_2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Cargas de Autores</h5>
+                    <p class="card-text">Ingrese aqui para agregar un Autor a la base de datos</p>
+                    <a th:href="@{/editorial/registrar}" class="btn btn-primary">CARGAR</a>
+                </div>
+            </div>
+        </div>
+
+      <div th:replace=" /fragments/error :: div">    </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    </body>
+
+</html>
